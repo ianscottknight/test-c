@@ -1,0 +1,18 @@
+version = 1
+requires-python = ">=3.9"
+
+[[package]]
+name = "test-a"
+version = "1.0.0"
+source = { git = "ssh://git@github.com/ianscottknight/test-a.git?rev=v1.0.0#7705a01e181e5a5677b619fdd84eccac3a22e966" }
+
+[[package]]
+name = "test-c"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "test-a" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "test-a", git = "ssh://git@github.com/ianscottknight/test-a.git?rev=v1.0.0" }]

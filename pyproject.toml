@@ -1,0 +1,22 @@
+[project]
+name = "test-c"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ian Scott Knight", email = "isk@alumni.stanford.edu" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "test-a",
+]
+
+[project.scripts]
+test-c = "test_c:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+test-a = { git = "ssh://git@github.com/ianscottknight/test-a.git", rev = "v1.0.0" }
